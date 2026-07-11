@@ -30,16 +30,16 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:hidden;cursor:none}
-
+ 
 /* ── CURSOR ── */
 #c1{position:fixed;width:8px;height:8px;border-radius:50%;background:var(--teal);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s,background .3s}
 #c2{position:fixed;width:44px;height:44px;border-radius:50%;border:1px solid rgba(0,229,176,.3);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
 body.h #c1{width:56px;height:56px;background:rgba(167,139,250,.12);border:1px solid var(--purple)}
 body.h #c2{width:72px;height:72px;border-color:rgba(167,139,250,.5)}
-
+ 
 /* ── NOISE ── */
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:500;opacity:.7}
-
+ 
 /* ── LOADER ── */
 #loader{position:fixed;inset:0;background:var(--bg);z-index:1000;display:flex;flex-direction:column;justify-content:space-between;padding:2.5rem 3rem;overflow:hidden}
 .l-top{display:flex;justify-content:space-between}
@@ -54,10 +54,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .l-status{font-family:var(--mono);font-size:.58rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;white-space:nowrap}
 #loader.out{animation:lOut .9s cubic-bezier(.76,0,.24,1) forwards}
 @keyframes lOut{to{transform:translateY(-100%);opacity:0}}
-
+ 
 #main{opacity:0;transition:opacity .7s .2s}
 #main.show{opacity:1}
-
+ 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.8rem 3rem;background:rgba(14,14,20,0);backdrop-filter:blur(0px);transition:background .4s,backdrop-filter .4s;border-bottom:1px solid transparent;transition:all .4s}
 nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bottom-color:var(--line)}
@@ -70,7 +70,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .n-avail{display:flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.6rem;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(0,229,176,.25);padding:.4rem .9rem;background:rgba(0,229,176,.04)}
 .n-dot{width:5px;height:5px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,229,176,.5)}60%{box-shadow:0 0 0 6px rgba(0,229,176,0)}}
-
+ 
 /* ── HERO ── */
 .hero{min-height:100vh;display:grid;grid-template-rows:1fr auto;padding:7rem 3rem 3rem;position:relative;overflow:hidden}
 #pc{position:absolute;inset:0;pointer-events:none}
@@ -80,7 +80,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .orb2{width:400px;height:400px;background:rgba(167,139,250,.07);bottom:-50px;left:-100px;animation-delay:-3s}
 .orb3{width:300px;height:300px;background:rgba(244,114,182,.05);top:40%;left:40%;animation-delay:-5s}
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-30px) scale(1.05)}66%{transform:translate(-15px,20px) scale(.95)}}
-
+ 
 .hero-center{display:flex;align-items:flex-end;position:relative;z-index:2}
 .hero-title{flex:1}
 .hero-eyeline{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;overflow:hidden}
@@ -113,7 +113,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .scroll-hint{font-family:var(--mono);font-size:.56rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem}
 .s-arrow{animation:bob 2s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
-
+ 
 /* ── MARQUEE ── */
 .mq-sect{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.85rem 0;overflow:hidden;background:var(--bg2);position:relative;z-index:10}
 .mq-track{display:flex;gap:0;white-space:nowrap;animation:mq 22s linear infinite}
@@ -122,7 +122,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .mq-item:hover{color:var(--teal)}
 .mq-item .dot{color:var(--purple);font-style:normal;font-family:var(--mono);font-size:.6rem;margin:0 .4rem;vertical-align:middle}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
+ 
 /* ── SECTION BASE ── */
 .sect{padding:7rem 3rem;border-top:1px solid var(--line);position:relative;overflow:hidden}
 .si{max-width:1200px;margin:0 auto;position:relative;z-index:2}
@@ -131,10 +131,10 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .sh-title{font-family:var(--serif);font-size:clamp(3rem,7vw,6.5rem);font-weight:900;letter-spacing:-.05em;line-height:.92}
 .sh-title em{font-style:italic;color:transparent;-webkit-text-stroke:1px rgba(240,238,252,.2)}
 .sh-title .gc{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-
+ 
 /* section ambient bg */
 .sect-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:1}
-
+ 
 /* ── ABOUT ── */
 #about{background:var(--bg)}
 .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:6rem}
@@ -145,7 +145,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .about-quote{margin-top:2.5rem;padding:1.5rem 1.8rem;border-left:2px solid var(--purple);background:rgba(167,139,250,.05);position:relative}
 .about-quote::before{content:'"';position:absolute;top:-.6rem;left:1.3rem;font-size:3rem;color:var(--purple);font-family:var(--serif);line-height:1;background:var(--bg);padding:0 .3rem;opacity:.6}
 .about-quote p{font-size:.9rem;font-style:italic;color:rgba(240,238,252,.55);line-height:1.7;font-weight:300}
-
+ 
 /* stat tower */
 .stat-tower{display:flex;flex-direction:column;border:1px solid var(--line2);margin-bottom:2rem;overflow:hidden}
 .st-row{padding:1.4rem 1.8rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:1.5rem;position:relative;overflow:hidden;transition:background .3s}
@@ -156,7 +156,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .st-n{font-family:var(--serif);font-size:2.6rem;font-weight:900;line-height:1;letter-spacing:-.04em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .st-l{font-family:var(--mono);font-size:.58rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
 .st-sub{font-size:.72rem;color:rgba(240,238,252,.3);margin-top:.2rem}
-
+ 
 /* terminal */
 .terminal{background:#080810;border:1px solid var(--line2);overflow:hidden;position:relative}
 .terminal::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--grad);opacity:.5}
@@ -165,7 +165,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .t-fn{font-family:var(--mono);font-size:.58rem;color:var(--muted);margin:0 auto;letter-spacing:.05em}
 .t-body{padding:1.3rem;font-family:var(--mono);font-size:.72rem;line-height:2.1}
 .tk{color:#a78bfa}.tv{color:#fbbf24}.tn{color:#f472b6}.tc{color:var(--muted);font-style:italic}.tb{color:rgba(255,255,255,.15)}
-
+ 
 /* ── SKILLS ── */
 #skills{background:var(--bg2)}
 .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line2)}
@@ -190,7 +190,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .sk-tag{font-family:var(--mono);font-size:.63rem;color:var(--muted);padding:.22rem .65rem;border:1px solid var(--line);transition:all .2s;letter-spacing:.03em}
 .sk:hover .sk-tag{color:var(--text);border-color:var(--line2)}
 .sk-tag:hover{color:var(--teal)!important;border-color:rgba(0,229,176,.4)!important;background:rgba(0,229,176,.05)}
-
+ 
 /* skill progress bars (animated on scroll) */
 .sk-bars{margin-top:1rem;display:flex;flex-direction:column;gap:.5rem}
 .sk-bar-row{display:flex;align-items:center;gap:.75rem}
@@ -202,7 +202,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .sk-bar-fill.pink{background:var(--pink)}
 .sk-bar-fill.blue{background:var(--blue)}
 .sk-bar-fill.gold{background:var(--gold)}
-
+ 
 /* ── EXPERIENCE ── */
 #experience{background:var(--bg)}
 .exp-items{display:flex;flex-direction:column}
@@ -225,7 +225,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .ei-pts li::before{content:'';position:absolute;left:0;top:.65rem;width:5px;height:1px;background:var(--muted)}
 .ei-pts li strong{color:var(--teal);font-weight:400}
 .ei-badge{display:inline-block;font-family:var(--mono);font-size:.55rem;color:var(--muted);border:1px solid var(--line);padding:.22rem .7rem;margin-top:1rem;letter-spacing:.1em;text-transform:uppercase}
-
+ 
 /* ── PROJECTS ── */
 #projects{background:var(--bg2)}
 .proj-items{display:flex;flex-direction:column}
@@ -244,14 +244,14 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .pi-tags{display:flex;flex-wrap:wrap;gap:.3rem;justify-content:flex-end}
 .pi-tag{font-family:var(--mono);font-size:.58rem;color:var(--muted);border:1px solid var(--line);padding:.18rem .55rem;letter-spacing:.04em;transition:all .2s}
 .pi:hover .pi-tag{border-color:rgba(167,139,250,.3);color:var(--purple)}
-
+ 
 /* ── CONTACT ── */
 #contact{background:var(--bg3)}
 .contact-hero{font-family:var(--serif);font-size:clamp(3.5rem,10vw,9.5rem);font-weight:900;line-height:.9;letter-spacing:-.055em;margin-bottom:5rem}
 .contact-hero em{font-style:italic;color:transparent;-webkit-text-stroke:2px rgba(240,238,252,.12)}
 .contact-hero .gc{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .contact-body{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
-
+ 
 /* form */
 .contact-form{display:flex;flex-direction:column;gap:1.2rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
@@ -273,7 +273,7 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .form-msg{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;padding:1rem 1.2rem;border:1px solid;display:none;margin-top:.5rem}
 .form-msg.success{color:var(--teal);border-color:rgba(0,229,176,.3);background:rgba(0,229,176,.05)}
 .form-msg.error{color:var(--pink);border-color:rgba(244,114,182,.3);background:rgba(244,114,182,.05)}
-
+ 
 /* contact info */
 .contact-info-col{}
 .cl{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 1.5rem;text-decoration:none;border-bottom:1px solid var(--line);transition:padding-left .25s,background .2s;color:var(--text);position:relative;overflow:hidden}
@@ -296,24 +296,24 @@ nav.scrolled{background:rgba(14,14,20,.85);backdrop-filter:blur(20px);border-bot
 .ig-l{font-family:var(--mono);font-size:.54rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.35rem}
 .ig-v{font-size:.86rem;color:rgba(240,238,252,.7)}
 .ig-v.av{color:var(--teal)}
-
+ 
 /* ── FOOTER ── */
 footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:var(--bg)}
 .fl{font-family:var(--mono);font-size:.58rem;color:var(--muted);letter-spacing:.06em}
 .fr{display:flex;gap:2rem}
 .fr a{font-family:var(--mono);font-size:.58rem;color:var(--muted);text-decoration:none;transition:color .2s;letter-spacing:.06em}
 .fr a:hover{color:var(--teal)}
-
+ 
 /* ── SCROLL ANIMATIONS ── */
 .r{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s ease}
 .rl{opacity:0;transform:translateX(-28px);transition:opacity .75s ease,transform .75s ease}
 .rr{opacity:0;transform:translateX(28px);transition:opacity .75s ease,transform .75s ease}
 .rs{opacity:0;transform:scale(.97);transition:opacity .75s ease,transform .75s ease}
 .r.in,.rl.in,.rr.in,.rs.in{opacity:1;transform:none}
-
+ 
 /* floating label animation on form focus */
 @keyframes labelFloat{from{transform:translateY(0)}to{transform:translateY(-2px)}}
-
+ 
 @media(max-width:960px){
   nav{padding:1.2rem 1.5rem}.n-links{display:none}
   .hero,.sect{padding:5rem 1.5rem 4rem}
@@ -331,7 +331,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
 </style>
 </head>
 <body>
-
+ 
 <!-- LOADER -->
 <div id="loader">
   <div class="l-top">
@@ -347,11 +347,11 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
     <div class="l-status" id="ls">Initialising</div>
   </div>
 </div>
-
+ 
 <div id="c1"></div><div id="c2"></div>
-
+ 
 <div id="main">
-
+ 
 <!-- NAV -->
 <nav id="nav">
   <div class="n-logo">Z·S</div>
@@ -364,7 +364,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
   </ul>
   <div class="n-avail"><div class="n-dot"></div>Open to work</div>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero" id="home">
   <canvas id="pc"></canvas>
@@ -398,14 +398,14 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
     <div class="scroll-hint"><span class="s-arrow">↓</span> Scroll to explore</div>
   </div>
 </section>
-
+ 
 <!-- MARQUEE -->
 <div class="mq-sect">
   <div class="mq-track">
     <span class="mq-item">Python<span class="dot">✦</span></span><span class="mq-item">SQL<span class="dot">✦</span></span><span class="mq-item">Power BI<span class="dot">✦</span></span><span class="mq-item">Tableau<span class="dot">✦</span></span><span class="mq-item">Pandas<span class="dot">✦</span></span><span class="mq-item">Data Analysis<span class="dot">✦</span></span><span class="mq-item">MySQL<span class="dot">✦</span></span><span class="mq-item">Excel<span class="dot">✦</span></span><span class="mq-item">EDA<span class="dot">✦</span></span><span class="mq-item">DAX<span class="dot">✦</span></span><span class="mq-item">NumPy<span class="dot">✦</span></span><span class="mq-item">Seaborn<span class="dot">✦</span></span><span class="mq-item">Python<span class="dot">✦</span></span><span class="mq-item">SQL<span class="dot">✦</span></span><span class="mq-item">Power BI<span class="dot">✦</span></span><span class="mq-item">Tableau<span class="dot">✦</span></span><span class="mq-item">Pandas<span class="dot">✦</span></span><span class="mq-item">Data Analysis<span class="dot">✦</span></span><span class="mq-item">MySQL<span class="dot">✦</span></span><span class="mq-item">Excel<span class="dot">✦</span></span><span class="mq-item">EDA<span class="dot">✦</span></span><span class="mq-item">DAX<span class="dot">✦</span></span><span class="mq-item">NumPy<span class="dot">✦</span></span><span class="mq-item">Seaborn<span class="dot">✦</span></span>
   </div>
 </div>
-
+ 
 <!-- ABOUT -->
 <section class="sect" id="about">
   <div class="sect-orb" style="width:400px;height:400px;background:rgba(0,229,176,.05);top:-100px;right:-100px"></div>
@@ -448,7 +448,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
     </div>
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section class="sect" id="skills">
   <div class="sect-orb" style="width:500px;height:500px;background:rgba(167,139,250,.04);bottom:-150px;left:-150px"></div>
@@ -464,7 +464,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
     </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <section class="sect" id="experience">
   <div class="sect-orb" style="width:450px;height:450px;background:rgba(244,114,182,.04);top:-100px;right:-100px"></div>
@@ -486,7 +486,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
     </div>
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section class="sect" id="projects">
   <div class="sect-orb" style="width:400px;height:400px;background:rgba(56,189,248,.04);bottom:-100px;left:-80px"></div>
@@ -501,7 +501,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section class="sect" id="contact">
   <div class="sect-orb" style="width:600px;height:600px;background:rgba(167,139,250,.05);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
@@ -567,7 +567,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <div class="fl">© 2026 Zahid Yusuf Shaikh — Data Analyst</div>
   <div class="fr">
@@ -577,7 +577,7 @@ footer{padding:2rem 3rem;border-top:1px solid var(--line);display:flex;justify-c
   </div>
 </footer>
 </div>
-
+ 
 <script>
 // ── LOADER ──
 const lp=document.getElementById('lp'),lg=document.getElementById('lg'),lb=document.getElementById('lb'),ls=document.getElementById('ls');
@@ -599,7 +599,7 @@ const lt=setInterval(()=>{
   const ni=Math.min(Math.floor(pct/20),statuses.length-1);
   if(ni!==sIdx){sIdx=ni;ls.textContent=statuses[ni]}
 },36);
-
+ 
 // ── CURSOR ──
 const c1=document.getElementById('c1'),c2=document.getElementById('c2');
 let mx=0,my=0,rx=0,ry=0;
@@ -609,7 +609,7 @@ document.querySelectorAll('a,button,.sk,.ei,.pi,.st-row,.ig,.mq-item,input,texta
   el.addEventListener('mouseenter',()=>document.body.classList.add('h'));
   el.addEventListener('mouseleave',()=>document.body.classList.remove('h'));
 });
-
+ 
 // ── PARTICLE CANVAS ──
 function initParticles(){
   const cv=document.getElementById('pc'),cx=cv.getContext('2d');
@@ -647,7 +647,7 @@ function initParticles(){
   }
   draw();
 }
-
+ 
 // ── COUNT UP (hero) ──
 function countUp(el,target,isFloat){
   let s=0;const inc=target/(1400/16);
@@ -657,7 +657,7 @@ function startCountUp(){
   document.querySelectorAll('[data-count]').forEach(el=>countUp(el,+el.dataset.count,false));
   document.querySelectorAll('[data-float]').forEach(el=>countUp(el,+el.dataset.float,true));
 }
-
+ 
 // ── COUNT UP on scroll (about stats) ──
 let aboutCounted=false;
 const aboutObs=new IntersectionObserver(entries=>{
@@ -668,7 +668,7 @@ const aboutObs=new IntersectionObserver(entries=>{
   }
 },{threshold:.3});
 const st=document.querySelector('.stat-tower');if(st)aboutObs.observe(st);
-
+ 
 // ── SKILL BARS animate on scroll ──
 const barObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
@@ -681,7 +681,7 @@ const barObs=new IntersectionObserver(entries=>{
   });
 },{threshold:.3});
 document.querySelectorAll('.sk').forEach(el=>barObs.observe(el));
-
+ 
 // ── SCROLL REVEAL ──
 const ro=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{
@@ -689,7 +689,7 @@ const ro=new IntersectionObserver(entries=>{
   });
 },{threshold:.07});
 document.querySelectorAll('.r,.rl,.rr,.rs').forEach(el=>ro.observe(el));
-
+ 
 // ── NAV scrolled ──
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
@@ -697,14 +697,14 @@ window.addEventListener('scroll',()=>{
   document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.id});
   document.querySelectorAll('.n-links a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));
 },{passive:true});
-
+ 
 // ── PROJECT GLOW ──
 function projGlow(e,card){
   const r=card.getBoundingClientRect();
   card.style.setProperty('--px',((e.clientX-r.left)/r.width*100)+'%');
   card.style.setProperty('--py',((e.clientY-r.top)/r.height*100)+'%');
 }
-
+ 
 // ── FORM VALIDATION ──
 const form=document.getElementById('cform');
 function val(id,errId,check,msg){
@@ -715,13 +715,13 @@ function val(id,errId,check,msg){
   return ok;
 }
 function isEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
-
+ 
 // Live validation on blur
 document.getElementById('fname').addEventListener('blur',()=>val('fname','err-name',v=>v.length>=2,'Please enter your full name.'));
 document.getElementById('femail').addEventListener('blur',()=>val('femail','err-email',isEmail,'Please enter a valid email address.'));
 document.getElementById('ftype').addEventListener('change',()=>val('ftype','err-type',v=>v!=='','Please select an opportunity type.'));
 document.getElementById('fmsg').addEventListener('blur',()=>val('fmsg','err-msg',v=>v.length>=20,'Message must be at least 20 characters.'));
-
+ 
 // Live char count on message
 document.getElementById('fmsg').addEventListener('input',function(){
   const err=document.getElementById('err-msg');
@@ -732,7 +732,7 @@ document.getElementById('fmsg').addEventListener('input',function(){
     this.classList.add('ok');this.classList.remove('err');
   }
 });
-
+ 
 form.addEventListener('submit',async e=>{
   e.preventDefault();
   const n =val('fname','err-name',v=>v.length>=2,'Please enter your full name.');
@@ -749,7 +749,7 @@ form.addEventListener('submit',async e=>{
   const bt =document.getElementById('btn-text');
   btn.disabled=true; bt.textContent='Sending…';
   res.style.display='none';
-
+ 
   const params={
     from_name   : document.getElementById('fname').value.trim(),
     from_email  : document.getElementById('femail').value.trim(),
@@ -758,7 +758,7 @@ form.addEventListener('submit',async e=>{
     message     : document.getElementById('fmsg').value.trim(),
     to_email    : 'zahidshaikh1910@gmail.com'
   };
-
+ 
   try {
     await emailjs.send(
       'service_472gdch',   // ← replace after EmailJS setup
