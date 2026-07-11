@@ -4,8 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Zahid Shaikh — Data Analyst</title>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>emailjs.init('bHoMfgil-xefg5l86');</script>
+ 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -760,18 +759,24 @@ form.addEventListener('submit',async e=>{
   };
  
   try {
-    await emailjs.send(
-      'service_472gdch',   // ← replace after EmailJS setup
-      'template_47d0f2i',  // ← replace after EmailJS setup
-      params
-    );
+    const resp = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        service_id:  'service_472gdch',
+        template_id: 'template_47d0f2i',
+        user_id:     'bHoMfgil-xefg5l86',
+        template_params: params
+      })
+    });
+    if (!resp.ok) throw new Error(await resp.text());
     res.textContent='✓ Message sent! You\'ll hear back within 24 hours.';
     res.className='form-msg success'; res.style.display='block';
     form.reset();
     document.querySelectorAll('.field input,.field textarea,.field select').forEach(el=>el.classList.remove('ok','err'));
     document.querySelectorAll('.field-err').forEach(el=>{el.textContent='';el.style.color=''});
   } catch(err) {
-    res.textContent='Something went wrong. Email zahidshaikh1910@gmail.com directly.';
+    res.textContent='Error: '+err.message+' — Email zahidshaikh1910@gmail.com directly.';
     res.className='form-msg error'; res.style.display='block';
   }
   btn.disabled=false; bt.textContent='Send message';
