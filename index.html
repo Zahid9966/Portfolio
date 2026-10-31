@@ -1049,17 +1049,17 @@ addEventListener('load',()=>{
      d:'Production, inventory, attendance and payroll tracking unified into one Django-based management platform with analytics reporting. Won Best Final Year Project at Prayog 2K25.',tags:['Django','SQL','Power BI','DAX']}
   ];
   const calls=n=>["Wearing number "+n+"…","Next out, number "+n,"Lining up at number "+n,"Here comes number "+n];
-  const shirt='M62 12 L84 4 Q100 20 116 4 L138 12 L192 44 L172 88 L150 77 L150 212 L50 212 L50 77 L28 88 L8 44 Z';
+  const shirt='M72 10 L36 24 L6 78 L36 96 L50 74 Q55 142 50 206 Q100 218 150 206 Q145 142 150 74 L164 96 L194 78 L164 24 L128 10 Q100 44 72 10 Z';
   const jersey=p=>`<svg viewBox="0 0 200 222" role="img" aria-label="Shirt number ${p.no}, ${p.back}">
     <defs><pattern id="stp" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="7" height="14" fill="rgba(20,0,10,.07)"/></pattern></defs>
     <path d="${shirt}" fill="#ff2a2a" opacity=".8" transform="translate(-5 0)"/><path d="${shirt}" fill="#2b4bff" opacity=".8" transform="translate(5 0)"/>
     <path d="${shirt}" fill="#7dffb0" stroke="#14000a" stroke-width="3" stroke-linejoin="round"/>
     <path d="${shirt}" fill="url(#stp)"/>
-    <path d="M84 4 Q100 20 116 4" fill="none" stroke="#14000a" stroke-width="6"/>
-    <path d="M28 88 L8 44 M172 88 L192 44" stroke="#e8125c" stroke-width="5"/>
+    <path d="M72 10 Q100 44 128 10" fill="none" stroke="#14000a" stroke-width="7" stroke-linecap="round"/><path d="M76 11 Q100 40 124 11" fill="none" stroke="#e8125c" stroke-width="3"/>
+    <path d="M6 78 L36 96 M194 78 L164 96" stroke="#e8125c" stroke-width="6" stroke-linecap="round"/>
     <text x="100" y="64" text-anchor="middle" fill="#14000a" style="font:700 18px 'Barlow Condensed',sans-serif;letter-spacing:1.5px">${p.back}</text>
     <text x="100" y="176" text-anchor="middle" fill="#14000a" style="font:italic 400 96px 'DM Serif Display',serif">${p.no}</text>
-    ${p.cap?'<g transform="rotate(-30 166 62)"><rect x="152" y="54" width="30" height="17" fill="#e8125c"/><text x="167" y="67" text-anchor="middle" fill="#fff2f7" style="font:700 12px \'Space Mono\',monospace">C</text></g>':''}
+    ${p.cap?'<clipPath id="shc'+p.no+'"><path d="'+shirt+'"/></clipPath><g clip-path="url(#shc'+p.no+')"><polygon points="178,46 186,60 152,77 146,64" fill="#e8125c" stroke="#14000a" stroke-width="2.5"/></g><text x="166" y="66" text-anchor="middle" fill="#fff2f7" transform="rotate(-27 166 62)" style="font:700 17px \'Barlow Condensed\',sans-serif">C</text>':''}
   </svg><div class="floor"></div>`;
 
   const lineup=$('#lineup'),spot=$('#spot'),list=$('#luList'),DUR=6;
