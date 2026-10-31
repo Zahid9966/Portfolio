@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio website of Zahid Shaikh, a data analyst. It is a single-page, football-themed site: the sections are laid out with match vocabulary (home, profile, formation, transfers, highlights and more) and scroll smoothly from one to the next.
+Personal portfolio website of Zahid Shaikh, an AI engineer. It is a single-page, football-themed site: the sections are laid out with match vocabulary (home, profile, formation, transfers, highlights and more) and scroll smoothly from one to the next.
 
 **Live site:** https://zahid9966.github.io/Portfolio/
 
